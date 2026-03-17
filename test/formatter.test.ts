@@ -136,7 +136,7 @@ describe('format', () => {
 
   describe('Hata Yönetimi', () => {
     it('bilinmeyen locale için hata fırlatır', () => {
-      expect(() => format(60, { locale: 'de' as any })).toThrow('[duration-format]')
+      expect(() => format(60, { locale: 'de' as any })).toThrow('[timeprettify]')
     })
   })
 

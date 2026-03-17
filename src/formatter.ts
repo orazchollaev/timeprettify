@@ -65,7 +65,7 @@ export function format(seconds: number, options: FormatOptions = {}): string {
   const { locale = 'en', style = 'long', units = 2 } = options
 
   if (!LOCALES[locale]) {
-    throw new Error(`[duration-format] Unknown locale: "${locale}". Supported: en, tr, ru`)
+    throw new Error(`[timeprettify] Unknown locale: "${locale}". Supported: en, tr, ru`)
   }
 
   if (seconds < 0) {

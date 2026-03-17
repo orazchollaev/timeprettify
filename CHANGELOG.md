@@ -1,4 +1,4 @@
-# duration-format
+# timeprettify
 
 ## 0.0.2
 
