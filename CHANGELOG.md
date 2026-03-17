@@ -1,5 +1,11 @@
 # duration-format
 
+## 0.0.2
+
+### Patch Changes
+
+- d0ec928: test ci/cd pipeline
+
 ## 0.0.1
 
 ### First Release
