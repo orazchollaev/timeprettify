@@ -1,0 +1,9 @@
+src/
+*.config.*
+tsconfig.json
+.husky/
+.github/
+.eslintrc*
+eslint.config.*
+.prettierrc*
+coverage/

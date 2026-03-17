@@ -1,0 +1,78 @@
+{
+  "name": "timeprettify",
+  "version": "1.0.0",
+  "description": "Lightweight duration formatter with multi-locale support",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --declaration --emitDeclarationOnly --outDir dist",
+    "dev": "vite build --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "release": "changeset publish",
+    "version": "changeset version && pnpm install --frozen-lockfile=false",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "duration",
+    "format",
+    "time",
+    "i18n",
+    "typescript",
+    "locale",
+    "humanize"
+  ],
+  "author": "orazchollaev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orazchollaev/timeprettify"
+  },
+  "bugs": {
+    "url": "https://github.com/orazchollaev/timeprettify/issues"
+  },
+  "homepage": "https://github.com/orazchollaev/timeprettify#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "@vitest/coverage-v8": "^4.1.0",
+    "eslint": "^10.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write"
+    ]
+  }
+}
