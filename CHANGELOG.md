@@ -1,5 +1,11 @@
 # timeprettify
 
+## 0.0.4
+
+### Patch Changes
+
+- [`79b862c`](https://github.com/orazchollaev/timeprettify/commit/79b862ca9bb0cedfc89f3979eb63b1f06a460dc6) Thanks [@orazchollaev](https://github.com/orazchollaev)! - add new turkmen language
+
 ## 0.0.3
 
 ### Patch Changes
