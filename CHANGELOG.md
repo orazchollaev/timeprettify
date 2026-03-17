@@ -1,8 +1,8 @@
 # duration-format
 
-## 1.0.0
+## 0.0.1
 
-### Initial Release
+### First Release
 
 - `format(seconds, options?)` — format duration from seconds
 - `createFormatter(defaults)` — create reusable formatter with preset options
