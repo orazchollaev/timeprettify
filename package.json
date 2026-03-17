@@ -1,6 +1,6 @@
 {
   "name": "timeprettify",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Lightweight duration formatter with multi-locale support",
   "type": "module",
   "main": "./dist/index.cjs",

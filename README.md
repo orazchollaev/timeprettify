@@ -1,8 +1,8 @@
-# duration-format
+# timeprettify
 
 > Lightweight duration formatter with multi-locale support.
 
-[![npm version](https://img.shields.io/npm/v/duration-format?color=blue&label=npm)](https://www.npmjs.com/package/duration-format)
+[![npm version](https://img.shields.io/npm/v/timeprettify?color=blue&label=npm)](https://www.npmjs.com/package/timeprettify)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 ---
@@ -10,7 +10,7 @@
 ## Install
 
 ```bash
-pnpm add duration-format
+pnpm add timeprettify
 ```
 
 ---
@@ -18,7 +18,7 @@ pnpm add duration-format
 ## Usage
 
 ```ts
-import { format } from 'duration-format'
+import { format } from 'timeprettify'
 
 format(3661) // '1 hour 1 minute'
 format(3661, { locale: 'tr' }) // '1 saat 1 dakika'
@@ -56,7 +56,7 @@ format(3661, { locale: 'tr', style: 'short' }) // '1sa 1dk'
 Create a reusable formatter with preset options:
 
 ```ts
-import { createFormatter } from 'duration-format'
+import { createFormatter } from 'timeprettify'
 
 const formatTr = createFormatter({ locale: 'tr' })
 
