@@ -21,7 +21,7 @@ pnpm add timeprettify
 import { format } from 'timeprettify'
 
 format(3661) // '1 hour 1 minute'
-format(3661, { locale: 'tr' }) // '1 saat 1 dakika'
+format(3661, { locale: 'tm' }) // '1 sagat 1 minut'
 format(3661, { locale: 'ru' }) // '1 час 1 минута'
 format(3661, { style: 'short' }) // '1h 1min'
 format(3661, { style: 'narrow' }) // '1h1m'
@@ -35,7 +35,7 @@ format(3661, { locale: 'tr', style: 'short' }) // '1sa 1dk'
 
 | Option   | Type                            | Default  | Description                 |
 | -------- | ------------------------------- | -------- | --------------------------- |
-| `locale` | `'en' \| 'tr' \| 'ru'`          | `'en'`   | Output language             |
+| `locale` | `'en' \| 'tr' \| 'ru' \| 'tm'`  | `'en'`   | Output language             |
 | `style`  | `'long' \| 'short' \| 'narrow'` | `'long'` | Format style                |
 | `units`  | `number`                        | `2`      | Max number of units to show |
 
@@ -58,11 +58,11 @@ Create a reusable formatter with preset options:
 ```ts
 import { createFormatter } from 'timeprettify'
 
-const formatTr = createFormatter({ locale: 'tr' })
+const formatTm = createFormatter({ locale: 'tm' })
 
-formatTr(3600) // '1 saat'
-formatTr(90) // '1 dakika 30 saniye'
-formatTr(3600, { style: 'short' }) // '1sa'
+formatTm(3600) // '1 sagat'
+formatTm(90) // '1 minut 30 sekunt'
+formatTm(3600, { style: 'short' }) // '1sek'
 ```
 
 ---
@@ -73,6 +73,7 @@ formatTr(3600, { style: 'short' }) // '1sa'
 | ------ | -------- | ----------------------- |
 | `en`   | English  | singular / plural       |
 | `tr`   | Turkish  | no plural               |
+| `tm`   | Turkmen  | no plural               |
 | `ru`   | Russian  | singular / few / plural |
 
 ---

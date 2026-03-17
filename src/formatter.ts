@@ -8,8 +8,9 @@ import type {
 import en from './locales/en'
 import tr from './locales/tr'
 import ru from './locales/ru'
+import tm from './locales/tm'
 
-const LOCALES: Record<Locale, LocaleDefinition> = { en, tr, ru }
+const LOCALES: Record<Locale, LocaleDefinition> = { en, tr, ru, tm }
 
 function parseToParts(seconds: number): DurationParts {
   const abs = Math.abs(Math.floor(seconds))
@@ -36,7 +37,7 @@ function pluralizeEn(n: number, def: UnitDefinition): string {
 
 function getUnit(n: number, def: UnitDefinition, locale: Locale): string {
   if (locale === 'ru') return pluralizeRu(n, def)
-  if (locale === 'tr') return def.singular
+  if (locale === 'tr' || locale === 'tm') return def.singular
   return pluralizeEn(n, def)
 }
 

@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'tr' | 'ru'
+export type Locale = 'en' | 'tr' | 'ru' | 'tm'
 
 export type Style = 'long' | 'short' | 'narrow'
 

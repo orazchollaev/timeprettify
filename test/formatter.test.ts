@@ -86,6 +86,20 @@ describe('format', () => {
     })
   })
 
+  describe('Türkmençe (tm)', () => {
+    it('tekil birimler gösterir — Türkmençede çoğul yok', () => {
+      expect(format(1, { locale: 'tm' })).toBe('1 sekunt')
+      expect(format(60, { locale: 'tm' })).toBe('1 minut')
+      expect(format(3600, { locale: 'tm' })).toBe('1 sagat')
+      expect(format(86400, { locale: 'tm' })).toBe('1 gün')
+    })
+
+    it('büyük değerlerde de tekil kalır', () => {
+      expect(format(7200, { locale: 'tm' })).toBe('2 sagat')
+      expect(format(180, { locale: 'tm' })).toBe('3 minut')
+    })
+  })
+
   describe('İngilizce çoğul (en)', () => {
     it('1 için tekil kullanır', () => {
       expect(format(1, { locale: 'en' })).toBe('1 second')
