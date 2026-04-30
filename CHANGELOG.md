@@ -1,5 +1,11 @@
 # timeprettify
 
+## 0.0.6
+
+### Patch Changes
+
+- [`110aeea`](https://github.com/orazchollaev/timeprettify/commit/110aeead2f3460755148b095dfb71e38ceb8ab02) Thanks [@orazchollaev](https://github.com/orazchollaev)! - update miinor dependencies
+
 ## 0.0.4
 
 ### Patch Changes
